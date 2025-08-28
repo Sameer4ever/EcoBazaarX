@@ -6,7 +6,8 @@ import SignIn from "./SignIn";
 import SignUp from "./SignUp";
 import Dashboard from "./Dashboard";
 import SellerDashboard from "./SellerDashboard";
-import Home from "./pages/Home";  // ✅ add this
+import Home from "./pages/Home";
+import SingleProduct from "./pages/SingleProduct";  // ✅ add this
 
 function App() {
   return (
@@ -14,7 +15,10 @@ function App() {
       <Router>
         <Routes>
           {/* Storefront homepage */}
-          <Route path="/" element={<Home />} />   {/* ✅ now shows Home first */}
+          <Route path="/" element={<Home />} />
+
+          {/* Single Product Page */}
+          <Route path="/product/:id" element={<SingleProduct />} />
 
           {/* Authentication */}
           <Route path="/signin" element={<SignIn />} />
