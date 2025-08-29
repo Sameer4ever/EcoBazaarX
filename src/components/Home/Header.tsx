@@ -40,6 +40,7 @@ export default function Header({
                 <a href="#">
                   <span className="circle"></span>&nbsp;EcoBazaarX
                 </a>
+                 <p className="tagline">Shop Smart. Save Carbon. 🌍</p>
               </div>
             </div>
             <div className="right">

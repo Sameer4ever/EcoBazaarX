@@ -12,7 +12,7 @@ export default function SliderHero() {
             <SwiperSlide>
               <div className="item">
                 <div className="image object-cover">
-                  <img src="/assets/img/slider/slider0.jpg" alt="Shoes" />
+                  <img src="/assets/img/slider/slider0.jpeg" alt="Shoes" />
                 </div>
                 <div className="text-content flexcol">
                   <h4>Shoes</h4>
@@ -20,17 +20,17 @@ export default function SliderHero() {
                     <span>Get The Latest</span><br />
                     <span>Shoe Collection</span>
                   </h2>
-                  <a href="#" className="primary-button">Buy Now</a>
+                  {/* <a href="#" className="primary-button">Buy Now</a> */}
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="item">
                 <div className="image object-cover">
-                  <img src="/assets/img/slider/slider1.jpg" alt="Fashion" />
+                  <img src="/assets/img/slider/slider1.jpeg" alt="Fashion" />
                 </div>
                 <div className="text-content flexcol">
-                  <h4>Fashion</h4>
+                  <h4>Sustainable Products</h4>
                   <h2>
                     <span>Look Stylish</span><br />
                     <span>All The Time</span>

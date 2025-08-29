@@ -11,7 +11,7 @@ export default function Features() {
           <div className="sectop flexitem">
             <h2>
               <span className="circle"></span>
-              <span>Recommendations</span>
+              <span>🌱 Eco Picks for You</span>
             </h2>
             <div className="second-links">
               <Link to="/" className="view-all">
@@ -71,6 +71,11 @@ export default function Features() {
                       {p.oldPrice && (
                         <span className="normal mini-text">₹ {p.oldPrice}</span>
                       )}
+                    </div>
+
+                    <div className="carbonImpact">
+                      <span className="normal ">Carbon Impact {p["Carbon Impact"]}</span>
+            
                     </div>
                     {p.description && (
                       <div className="footer">

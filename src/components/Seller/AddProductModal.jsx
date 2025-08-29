@@ -79,6 +79,13 @@ export default function AddProductModal({ open, onClose }) {
                 
                 fullWidth
               />
+              <TextField
+                name="Carbon Emission"
+                placeholder="Enter Amount"
+                multiline
+                
+                fullWidth
+              />
 
               {/* Image Upload */}
               <Button variant="outlined" component="label">

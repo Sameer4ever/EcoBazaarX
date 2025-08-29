@@ -1,34 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Rubik:wght@300;400;500;600&display=swap");
 
 :root {
-  --primary-color: #7886C7;
-            --secondary-color: #A9B5DF;
-            --secondary-dark-color: #2D336B;
-            --accent-color: #FFF2F2;
-            
-            --white-color: #ffffff;
-            --light-bg-color: #f2f3f5;
-            --light-text-color: #7c899a;
-            --border-color: #e5e8ec;
-            --dark-color: #0a021c;
+  /* 🌿 EcoBazaarX Green Palette */
+  --primary-color: #283106;       /* SERPENTINE - strong earthy green */
+  --secondary-color: #777E5C;     /* IVY - muted green for accents */
+  --secondary-dark-color: #C7C2AB;/* KHAKI LINEN - neutral beige tone */
+  --accent-color: #D1D8BD;        /* SPRING - fresh light green */
+  
+  --white-color: #ffffff;
+  --light-bg-color: #DFE0DC;      /* FIRST FROST - soft eco gray */
+  --light-text-color: #7c899a;
+  --border-color: #e5e8ec;
+  --dark-color: #0a021c;
 
-
+  /* Typography sizes */
   --font-small: 13px;
   --font-smaller: 11px;
 
+  /* Percentages */
   --percent100: 100%;
   --percent50: 50%;
 
+  /* Font weights */
   --fw3: 300;
   --fw5: 500;
   --fw6: 600;
   --fw7: 700;
   --fw8: 800;
 
+  /* Transitions */
   --trans-background-color: background-color 0.3s, color 0.3s;
   --trans-background: background-color 0.3s;
   --trans-color: color 0.3s;
 }
+
 
 * {
   margin: 0;
@@ -439,6 +444,9 @@ nav .fly-item {
 .header-main .right {
   flex: 1;
 }
+.header-main .left {
+  flex: 1;
+}
 form {
   position: relative;
 }
@@ -450,6 +458,7 @@ form.search input {
   width: var(--percent100);
   border-radius: 7px;
   font-size: 0.9em;
+  
   font-weight: var(--fw3);
 }
 form.search :where(span, button) {
@@ -1335,6 +1344,7 @@ form.search button:hover {
   opacity: 1;
 }
 
+
 .products .actions {
   display: flex;
   flex-wrap: wrap;
@@ -1359,8 +1369,8 @@ form.search button:hover {
   background-color: transparent;
 }
 .products .actions .button-cart {
-  flex: 1;
-  min-width: 200px;
+  flex: 0;
+  min-width: 400px;
 }
 .products .actions .button-cart button {
   width: var(--percent100);
@@ -1800,4 +1810,53 @@ form label {
   ::-webkit-scrollbar-thumb:hover {
     background: var(--dark-color); /* Warna latar belakang thumb saat dihover */
   }
+/* ===========================
+   SINGLE PRODUCT PAGE FIX
+   =========================== */
+.single-product .wrapper.flexwrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px; /* spacing between image & info */
+}
+
+.single-product .wrapper.flexwrap .col-6 {
+  flex: 1;
+  min-width: 0;
+}
+
+.single-product .col-6:first-child {
+  max-width: 50%; /* gallery on left */
+}
+
+.single-product .col-6:last-child {
+  max-width: 50%; /* info on right */
+  text-align: left;
+}
+
+.single-product .product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.single-product .product-info h1,
+.single-product .product-info .price,
+.single-product .product-info .rating,
+.single-product .product-info .actions {
+  text-align: left;
+}
+
+/* RESPONSIVE: Stack on mobile */
+@media (max-width: 768px) {
+  .single-product .wrapper.flexwrap {
+    flex-direction: column;
+  }
+
+  .single-product .col-6 {
+    max-width: 100% !important;
+  }
+}
+
+
+  
 }

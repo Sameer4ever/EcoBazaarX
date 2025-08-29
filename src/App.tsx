@@ -8,6 +8,7 @@ import Dashboard from "./Dashboard";
 import SellerDashboard from "./SellerDashboard";
 import Home from "./pages/Home";
 import SingleProduct from "./pages/SingleProduct";  // ✅ add this
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
 
           {/* Single Product Page */}
           <Route path="/product/:id" element={<SingleProduct />} />
+
+          <Route path="/checkout" element={<Checkout />} />
 
           {/* Authentication */}
           <Route path="/signin" element={<SignIn />} />
