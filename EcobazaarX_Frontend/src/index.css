@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* EcoBazaarX Design System - Sustainable & Natural */
+
+@layer base {
+  :root {
+    /* Light theme - Natural & Sustainable */
+    --background: 46 33% 98%;
+    --foreground: 158 37% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 158 37% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 158 37% 15%;
+
+    --primary: 158 64% 29%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 158 25% 85%;
+    --secondary-foreground: 158 37% 15%;
+
+    --muted: 158 15% 92%;
+    --muted-foreground: 158 15% 45%;
+
+    --accent: 39 75% 65%;
+    --accent-foreground: 158 37% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 158 20% 88%;
+    --input: 158 20% 88%;
+    --ring: 158 64% 29%;
+
+    --radius: 0.75rem;
+
+    /* Sustainable gradients */
+    --gradient-eco: linear-gradient(135deg, hsl(var(--primary)), hsl(158 45% 45%));
+    --gradient-nature: linear-gradient(180deg, hsl(158 30% 95%), hsl(46 30% 95%));
+    --gradient-hero: linear-gradient(135deg, hsl(158 64% 29%) 0%, hsl(158 45% 45%) 50%, hsl(39 75% 65%) 100%);
+
+    /* Eco shadows */
+    --shadow-eco: 0 4px 20px -4px hsl(var(--primary) / 0.15);
+    --shadow-natural: 0 8px 30px -8px hsl(var(--primary) / 0.2);
+    --shadow-glow: 0 0 30px hsl(var(--accent) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 158 20% 8%;
+    --foreground: 158 15% 88%;
+
+    --card: 158 20% 10%;
+    --card-foreground: 158 15% 88%;
+
+    --popover: 158 20% 10%;
+    --popover-foreground: 158 15% 88%;
+
+    --primary: 158 45% 65%;
+    --primary-foreground: 158 20% 8%;
+
+    --secondary: 158 20% 15%;
+    --secondary-foreground: 158 15% 88%;
+
+    --muted: 158 20% 15%;
+    --muted-foreground: 158 10% 55%;
+
+    --accent: 39 65% 55%;
+    --accent-foreground: 158 20% 8%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 158 15% 88%;
+
+    --border: 158 20% 18%;
+    --input: 158 20% 18%;
+    --ring: 158 45% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Eco-friendly component styles */
+  .eco-card {
+    @apply bg-card border border-border rounded-xl shadow-[var(--shadow-eco)] backdrop-blur-sm;
+    transition: var(--transition-smooth);
+  }
+
+  .eco-card:hover {
+    @apply shadow-[var(--shadow-natural)];
+    transform: translateY(-2px);
+  }
+
+  .gradient-eco {
+    background: var(--gradient-eco);
+  }
+
+  .gradient-nature {
+    background: var(--gradient-nature);
+  }
+
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  /* Nature-inspired animations */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .pulse-eco {
+    animation: pulse-eco 2s infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes pulse-eco {
+    0%, 100% { 
+      box-shadow: 0 0 0 0 hsl(var(--primary) / 0.4);
+    }
+    50% { 
+      box-shadow: 0 0 0 20px hsl(var(--primary) / 0);
+    }
+  }
+
+  /* Typography enhancements */
+  .text-gradient {
+    background: var(--gradient-eco);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Interactive elements */
+  .btn-eco {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium;
+    @apply hover:scale-105 active:scale-95;
+    transition: var(--transition-bounce);
+    box-shadow: var(--shadow-eco);
+  }
+
+  .btn-eco:hover {
+    box-shadow: var(--shadow-natural);
+  }
+}
