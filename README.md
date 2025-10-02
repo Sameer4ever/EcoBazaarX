@@ -60,29 +60,7 @@ This architecture enables **real-time carbon footprint computation** and respons
 
 ---
 
-## Modules
-
-### Module 1: Authentication
-
-- Secure login and registration with **React forms**
-- Email verification and password encryption
-- Role-based access (Customer, Seller, Admin)
-
-### Module 2: Dashboard Management
-
-- **Seller Dashboard:** Add, edit, delete products; track sustainability metrics.
-- **Admin Control Panel:** Manage users, monitor platform analytics, ensure compliance.
-- **Product Operations:** Full CRUD functionality for product management.
-
-### Module 3: Shopping & Analytics
-
-- **Smart Cart System:** Real-time carbon calculation
-- **Integrated Checkout:** Seamless payment processing with carbon summary
-- **Carbon Report Module:** Track carbon savings and sustainable choices
-
----
-
-## 📊 Database Overview
+## Database Overview
 
 **Core Entities**
 
@@ -98,3 +76,12 @@ This architecture enables **real-time carbon footprint computation** and respons
 - Carbon Analytics – Reports and dashboards for environmental impact
 
 ---
+##  License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+##  Author
+
+**Sameer Malik**
+- GitHub: [@Sameer4ever](https://github.com/Sameer4ever)
+
